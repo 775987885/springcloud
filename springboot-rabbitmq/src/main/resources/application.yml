@@ -1,0 +1,23 @@
+server:
+    # address: 192.168.200.117 #自己主机的IP地址
+  port: 8082 #端口
+  servlet:
+    application:
+      name: consul-registry
+spring:
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        #health-check-critical-timeout: ${management.contextPath}/health
+        health-check-interval: 15s
+        instance-id: consul-registry
+
+  rabbitmq:
+     host: 127.0.0.1 #MQ IP 和 端口
+     port: 5672
+     username: guest #MQ登录名
+     password: guest #MQ登录密码
+     virtual-host: / #MQ的虚拟主机名称
+     publisher-confirms: true #消息回调

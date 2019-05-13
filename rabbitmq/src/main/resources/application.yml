@@ -1,0 +1,24 @@
+server:
+    # address: 192.168.200.117 #自己主机的IP地址
+  port: 8083 #端口
+  servlet:
+    application:
+      name: rabbitmq
+spring:
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        #health-check-critical-timeout: ${management.contextPath}/health
+        health-check-interval: 15s
+        instance-id: rabbitmq
+
+  rabbitmq:
+     host: 127.0.0.1 #MQ IP 和 端口
+     port: 5672
+     username: guest #MQ登录名
+     password: guest #MQ登录密码
+     virtual-host: / #MQ的虚拟主机名称
+     publisher-confirms: true #开启发送确认
+     publisher-returns: true #开启发送失败退回

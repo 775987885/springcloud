@@ -19,8 +19,9 @@
     <name>springcloud</name>
 
     <modules>
-        <module>consul-registry</module>
         <module>gateway</module>
+        <module>rabbitmq</module>
+        <module>springboot-rabbitmq</module>
     </modules>
 
     <properties>

@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
+ * @author ghjia
  * spring cloud中discovery service有许多种实现（eureka、consul、zookeeper等等）
  * @EnableDiscoveryClient基于spring-cloud-commons
  * @EnableEurekaClient基于spring-cloud-netflix
